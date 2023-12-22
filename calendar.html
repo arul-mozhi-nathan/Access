@@ -1,0 +1,363 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calender</title>
+    <style>
+        th{
+         color: red;
+         text:bold;
+        }
+        td{
+            color:blue;
+            text:bold;
+        }
+        .center{
+            margin-right: auto;
+            margin-right: auto;
+        }
+        h1{
+            font-size: 50px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text:bold;
+        }
+        body{
+            background: linear-gradient(to left,aquamarine,steelblue);
+            text:bold;
+        }
+        td.holiday {
+                 background-color:greenyellow; /* Light Red for Holidays */
+         }
+  
+        td.leave {
+                  background-color:gold; /* Light Blue for Leave Days */
+                }
+    </style>
+</head>
+<body style="text-align: center;">
+    <img src="">
+    <h1 style="word-spacing: 105px;">OCTOBER 2023</h1>
+    <table  align="center" border="2" cellspacing=25px cellpadding=20px class="center" >
+        <thead>
+            <tr>
+                <th class="header">Sun</th>
+                <th class="header">Mon</th>
+                <th class="header">Tue</th>
+                <th class="header">Wed</th>
+                <th class="header">Thu</th>
+                <th class="header">Fri</th>
+                <th class="header">Sat</th>
+            </tr>
+        </thead>
+            <tr>
+                <td class="holiday">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td class="leave">7</td>
+            </tr>
+            <tr>
+                <td class="holiday">8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td class="leave">14</td>
+            </tr>
+            <tr>
+                <td class="holiday">15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td class="leave" >21</td>
+            </tr>
+            <tr>
+                <td class="holiday">22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td class="leave">28</td>
+            </tr>
+            <tr>
+                <td class="holiday">29</td>
+                <td>30</td>
+                <td >31</td>
+                <td ></td>
+                <td ></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </table>
+        </div>
+        </div>
+        </body>
+        </html>-->
+<!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+  }
+  
+  .calendar {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .month {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th.header {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  td {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  td.holiday {
+    background-color: #ffcccb; /* Light Red for Holidays */
+  }
+  
+  td.leave {
+    background-color:aquamarine; /* Light Blue for Leave Days */
+  }
+  
+  td.empty {
+    background-color: #f0f0f0; /* Light Gray for Empty Cells */
+  }
+  .event-form {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+input[type="date"], input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.events {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-top: 10px;
+    max-width: 300px;
+}
+
+.events h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.events ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.events li {
+    margin-bottom: 10px;
+}
+
+    </style>
+    </head>
+    <body>
+    <div class="calendar">
+        <div class="month">
+        October 2023
+        </div>
+        <div class="calendar">
+            <div class="header">
+                <h1 id="currentMonth"></h1>
+            </div>
+            <div class="days">
+        <table>
+        <tr>
+            <th class="header">Sun</th>
+            <th class="header">Mon</th>
+            <th class="header">Tue</th>
+            <th class="header">Wed</th>
+            <th class="header">Thu</th>
+            <th class="header">Fri</th>
+            <th class="header">Sat</th>
+        </tr>
+        <tr>
+            <td class="holiday">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td class="holiday">8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td class="leave">14</td>
+        </tr>
+        <tr>
+            <td class="holiday">15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td >21</td>
+        </tr>
+        <tr>
+            <td class="holiday">22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td class="leave">28</td>
+        </tr>
+        <tr>
+            <td class="holiday">29</td>
+            <td>30</td>
+            <td >31</td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </table>
+    </div>
+    <div class="dates" id="dates"></div>
+        <div class="event-form">
+            <input type="date" id="eventDate" placeholder="Date">
+            <input type="text" id="eventDescription" placeholder="Event Description">
+            <button id="addEvent">Add Event</button>
+        </div>
+        <div class="events" id="events"></div>
+    <script src="c.js">
+        const currentMonth = document.getElementById("currentMonth");
+const datesContainer = document.getElementById("dates");
+const eventDateInput = document.getElementById("eventDate");
+const eventDescriptionInput = document.getElementById("eventDescription");
+const addEventButton = document.getElementById("addEvent");
+const eventsContainer = document.getElementById("events");
+
+const events = [];
+
+function updateCalendar() {
+    const currentDate = new Date();
+    const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+    const lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+
+    currentMonth.textContent = firstDay.toLocaleString("en-US", { month: "long" });
+
+    let day = new Date(firstDay);
+
+    datesContainer.innerHTML = "";
+
+    while (day <= lastDay) {
+        const dateElement = document.createElement("div");
+        dateElement.classList.add("date");
+        dateElement.textContent = day.getDate();
+
+        const dateValue = day.toISOString().split("T")[0];
+
+        if (day < currentDate) {
+            dateElement.classList.add("past-date");
+        }
+
+        if (events.find(event => event.date === dateValue)) {
+            dateElement.classList.add("has-event");
+        }
+
+        dateElement.addEventListener("click", () => {
+            eventDateInput.value = dateValue;
+        });
+
+        datesContainer.appendChild(dateElement);
+        day.setDate(day.getDate() + 1);
+    }
+}
+
+function updateEventList() {
+    eventsContainer.innerHTML = "";
+    events.forEach(event => {
+        const eventItem = document.createElement("li");
+        eventItem.textContent = `${event.date}: ${event.description}`;
+        eventsContainer.appendChild(eventItem);
+    });
+}
+
+addEventButton.addEventListener("click", () => {
+    const eventDate = eventDateInput.value;
+    const eventDescription = eventDescriptionInput.value;
+
+    if (eventDate && eventDescription) {
+        events.push({ date: eventDate, description: eventDescription });
+        updateCalendar();
+        updateEventList();
+        eventDateInput.value = "";
+        eventDescriptionInput.value = "";
+    }
+});
+
+updateCalendar();
+updateEventList();
+
+
+
+
+
+
+
+
+    </script>
+    </div>
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+

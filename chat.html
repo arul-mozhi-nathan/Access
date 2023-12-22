@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Storage Example</title>
+<style>
+    /* Apply CSS styles to the textarea element */
+textarea {
+
+    width: 80%; /* Set the width to 100% of its container */
+    height: 150px; /* Set the height to your preferred value */
+    padding: 10px; /* Add padding to the inside of the textarea */
+    font-size: 30px; /* Set the font size */
+    border: 2px solid #ccc; /* Add a border with a color */
+    border-radius: 25px; /* Add rounded corners */
+    resize: vertical; /* Allow vertical resizing */
+    
+}
+
+/* Apply specific styles when the textarea is focused */
+textarea:focus {
+    border-color: #9dc2e9; /* Change border color on focus */
+    outline: none; /* Remove the default focus outline */
+}
+label{
+    font-size: 50px;
+    color:rgb(5, 5, 5);
+    
+}
+.input{
+    align-items: center;
+    margin-left: 1200px;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: rgb(181, 188, 193);
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight:bold;
+}
+
+    
+</style>
+</head>
+
+<body>
+    <form action="chat.php" method="post">
+        <label for="text">Enter Message:</label>
+        <textarea name="text" id="text" rows="4" cols="50"></textarea>
+        <br>
+        <input class="input"type="submit" value="Send">
+    </form>
+</body>
+</html>

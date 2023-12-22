@@ -1,0 +1,43 @@
+nav {
+    text-align: left;
+    font-size: 25px;
+    position: sticky;
+
+  }
+  
+  /* Style for the list items (menu items) */
+  nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    position: sticky;
+    
+  }
+  
+  nav li {
+    display: inline; /* Display menu items horizontally */
+    margin: 0 15px; /* Add spacing between items */
+    position: sticky;
+  }
+  
+  /* Style for the links */
+  nav a {
+    text-decoration: none; /* Remove underlines */
+    color: #050404; /* Text color */
+    font-weight: bold; /* Make the text bold */
+    transition: transform .2s;
+    position: sticky;
+  }
+  
+  /* Change link color on hover */
+  nav a:hover {
+    color: #ec27ecd7; /* New text color on hover */
+    transform: scale(1.5);
+   
+  }
+  .account{
+    margin-left: 450px;
+    
+  }
+  
+  
+/* nav ends*/
